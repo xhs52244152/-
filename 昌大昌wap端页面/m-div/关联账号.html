@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>关联账号</title>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/liruize.js" type="text/javascript"></script>
+    <script src="js/adaptive.js"></script>
+    <script src="js/public.js"></script>
+    <link href="swiper/swiper-4.3.3.min.css" rel="stylesheet" type="text/css"/>
+    <script src="swiper/swiper-4.3.3.min.js" type="text/javascript"></script>
+    <link href="icomoon/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/mstyle.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .top-msg {
+            margin: 0.75rem 0;
+            width: 100%;
+            font-size: 0.33rem;
+            color: #3C3C3C;
+            text-align: center;
+        }
+
+        .adjust-center {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .img-size {
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .head-wrap {
+            margin: 0.5rem 0 0.25rem 0;
+            padding: 0.1rem 0;
+            width: 100%;
+            font-size: 0.3rem;
+            text-align: center;
+        }
+
+        .head-img {
+            height: 1.6rem;
+            width: 1.6rem;
+            border-radius: 1.6rem;
+            color: #6A6A6A;
+        }
+
+        .user-name {
+            margin: 0 0 0.5rem 0;
+            width: 100%;
+            font-size: 0.28rem;
+            color: #6A6A6A;
+            text-align: center;
+        }
+
+        .tip-cont {
+            margin: 0.4rem 0 0.8rem 0;
+            width: 100%;
+            font-size: 0.28rem;
+            color: #7D7D7D;
+            text-align: center;
+        }
+
+        .defn-btn {
+            width: 100%;
+            height: 0.9rem;
+            text-align: center;
+            font-size: 0.32rem;
+            border-radius: 1.0rem;
+            background: white;
+            color: #4D4D4D;
+            border: 1px solid #E1E1E1;
+        }
+    </style>
+    <script>
+        window['adaptive'].desinWidth = 640;
+        window['adaptive'].baseFont = 20;
+        window['adaptive'].maxWidth = 480;
+        window['adaptive'].scaleType = 2;
+        window['adaptive'].init();
+    </script>
+</head>
+<body>
+<!--<div class="head">
+    <a href="#" title="" class="headback"><i class="icon-arrow"></i></a>
+    <h3>注册</h3>
+</div>-->
+<div class="regformbox">
+
+    <div class="top-msg">
+        关联UEMO账号
+    </div>
+
+    <div class="adjust-center head-wrap">
+        <div class="head-img"
+             style="background-size: cover; background-repeat: no-repeat; background-image: url('images/ico1.png');"></div>
+    </div>
+
+    <div class="user-name">
+        阿毫
+    </div>
+
+    <div class="tip-cont">
+        您的微信尚未关联UEMO账号
+    </div>
+
+
+    <div class="regform_btndiv"><input type="button" value="关联新账号" class="defn-btn"/>
+    </div>
+    <div class="regform_btndiv"><input type="button" value="关联已有账号" class="defn-btn"/>
+    </div>
+</div>
+<div class="clear" style="height:0.3rem;"></div>
+<div class="nav">
+    <ul class="clearbox">
+        <li class="active"><a href="#" title=""><p><img src="images/navico1.png" alt=""/></p>
+            <p><img src="images/navico1_c.png" alt=""></p>
+            <h3>首页</h3></a></li>
+        <li><a href="#" title=""><p><img src="images/navico2.png" alt=""/></p>
+            <p><img src="images/navico2_c.png" alt=""></p>
+            <h3>竞标项目</h3></a></li>
+        <li><a href="#" title=""><p><img src="images/navico3.png" alt=""/></p>
+            <p><img src="images/navico3_c.png" alt=""></p>
+            <h3>推荐项目</h3></a></li>
+        <li><a href="#" title=""><p><img src="images/navico4.png" alt=""/></p>
+            <p><img src="images/navico4_c.png" alt=""></p>
+            <h3>个人中心</h3></a></li>
+    </ul>
+</div>
+<div class="navfixedbg"></div>
+</body>
+<script>
+    $.fn.onlyNumAlpha = function () {
+        $(this).keypress(function (event) {
+            var eventObj = event || e;
+            var keyCode = eventObj.keyCode || eventObj.which;
+            if ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122))
+                return true;
+            else
+                return false;
+        }).focus(function () {
+            this.style.imeMode = 'disabled';
+        }).bind("paste", function () {
+            var clipboard = window.clipboardData.getData("Text");
+            if (/^(\d|[a-zA-Z])+$/.test(clipboard))
+                return true;
+            else
+                return false;
+        });
+    };
+
+    $(function () {
+
+        //限制只能输入字母以及密码
+        $(".onlyNumAlpha").onlyNumAlpha();
+
+        //下一步
+        var ajax_stat = true;
+        $('#next_step').click(function () {
+
+            //判断必填项
+            if (ajax_stat) {
+
+                ajax_stat = false;
+
+                var req_fld = [];
+
+                //手机号
+                var phone = trim($('#phone').val());
+                if (phone == '') {
+                    req_fld.push('[ * 手机号 ]');
+                }
+                //设置密码
+                var pwd = trim($('#pwd').val());
+                if (pwd == '') {
+                    req_fld.push('[ * 设置密码 ]');
+                }
+                //确认密码
+                var sure_pwd = trim($('#sure_pwd').val());
+                if (sure_pwd == '') {
+                    req_fld.push('[ * 确认密码 ]');
+                }
+                //确认密码
+                var code = trim($('#code').val());
+                if (code == '') {
+                    req_fld.push('[ * 验证码 ]');
+                }
+                //注册协议
+                if ($('#reg_prot').is(':checked')) {
+                    // do something
+                } else {
+                    req_fld.push('[ * 注册协议 ]');
+                }
+
+                if (req_fld.length != 0) {
+
+                    ajax_stat = true;
+
+                    var regProtStat = req_fld.indexOf('[ * 注册协议 ]');
+                    if (req_fld.length != 1) {
+
+                        if (regProtStat > -1) {
+                            req_fld.splice(regProtStat, 1);
+                            alert('请输入' + req_fld.join('、') + '以及勾选[ * 注册协议 ]');
+                        } else {
+                            alert('请输入' + req_fld.join('、'));
+                        }
+
+                    } else {
+
+                        if (regProtStat > -1) {
+                            req_fld.splice(regProtStat, 1);
+                            alert('请勾选[ * 注册协议 ]');
+                        } else {
+                            alert('请输入' + req_fld.join('、'));
+                        }
+
+                    }
+
+                } else {
+
+                    var data = {
+                        phone: phone,
+                        pwd: pwd,
+                        sure_pwd: sure_pwd,
+                        code: code
+                    };
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{:url('xxx')}",
+                        data: data,
+                        dataType: "json",
+                        success: function (data) {
+
+                            if (data.status == 1) {
+
+                                alert(data.message);
+
+                            } else {
+
+                                alert(data.message);
+                                ajax_stat = true;
+
+                            }
+                        }
+
+                    });
+
+
+                }
+
+
+            }
+
+
+        });
+
+    });
+</script>
+</html>

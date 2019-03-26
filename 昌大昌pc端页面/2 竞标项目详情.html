@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>首页</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/li.js"></script>
+<script type="text/javascript" src="jq-ui/jquery-ui.min.js"></script>
+<link href="jq-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="headtopbg">
+	<div class="headtop clearbox">
+		<div class="headtop_left">您好，欢迎来到xxx！</div>
+		<div class="headtop_right">
+			<a href="#" title="">账号密码登录</a><i>|</i><a href="#" title="">供应商注册</a>
+		</div>
+	</div>
+</div>
+<div class="head clearbox">
+	<h2 class="logo"><a href="#" title=""><img src="images/logo.png" width="300" height="45" alt=""></a></h2>
+	<div class="headsearch">
+		<input type="text" value="请输入项目名称或编号" class="headsearch_txt inputtxt"/>
+		<input type="submit" value=" " class="headsearch_btn"/>
+	</div>
+</div>
+<div class="navbg">
+	<div class="nav">
+		<ul class="clearbox">
+			<li><a href="#" title="">首页</a></li>
+			<li><a href="#" title="">竞标项目</a></li>
+			<li><a href="#" title="">推荐项目</a></li>
+			<li><a href="#" title="">须知及条件</a></li>
+			<li class="active"><a href="#" title="">关于我们</a>
+				<ul >
+					<li><a href="#" title="">关于我们</a></li>
+					<li><a href="#" title="">公司简介</a></li>
+					<li><a href="#" title="">旗下品牌</a></li>
+					<li><a href="#" title="">公司新闻</a></li>
+					<li><a href="#" title="">分店网络</a></li>
+					<i></i>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="banner">
+	<div class="bannerbox">
+		<img src="images/pic7.jpg" width="1920" height="197" alt="">
+	</div>
+</div>
+<div class="container">
+	<div class="bidinfobox">
+		<div class="bidinfotop">
+			<h1 class="bidinfotitle">美莱保洁利有限公司 一竞价项目详情（CB162596636626616)　</h1>
+			<p class="bidinfotime">发布时间： 2018-12-08 10:59</p>
+		</div>
+		<div class="bidinfo_list">
+			<h3 class="bidinfo_wztitle">竞价信息：</h3>
+			<div class="bidinfo_wzdiv"><strong>需求所属类型：</strong><span>日用品</span></div>
+			<div class="bidinfo_wzdiv"><strong>当前最低报价：</strong><span>32659</span></div>
+			<div class="bidinfo_wzdiv"><strong>投标供应商数：</strong><span>236469</span></div>
+			<div class="bidinfo_wzdiv"><strong>竞价开始时间：</strong><span>2018-12-30</span></div>
+			<div class="bidinfo_wzdiv"><strong>竞价结束时间：</strong><span>2018-12-30</span></div>
+			<div class="bidinfo_wzdiv"><strong>需求详情描述：</strong><span>投标方提供方案或样品，经过使用部门老师的认可方可竞价</span></div>
+			<div class="bidinfo_wzdiv"><strong>所有投标供应商：</strong><span>游戏优洁力有限公司&nbsp;&nbsp;&nbsp;&nbsp;游戏优洁力有限公司&nbsp;&nbsp;&nbsp;&nbsp;游戏优洁力有限公司</span></div>
+			<div class="bidinfo_list_share">
+				<ul >
+					<li><a href="#" title="" class="bidinfo_list_share_zf">转发</a></li>
+					<li><a href="#" title="" class="bidinfo_list_share_sc">收藏</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bidinfo_info">
+			<h3 class="bidinfo_infoztitle">项目详情：</h3>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bidinfo_info_table">
+				<tr>
+					<th>项目名称</th>
+					<th width="15%">所属类型</th>
+					<th width="15%">数量</th>
+					<th width="12%">单位</th>
+					<th width="15%">品牌</th>
+					<th width="18%">售后服务</th>
+				</tr>
+				<tr>
+					<td>猪肉大量采购</td>
+					<td>办公用品</td>
+					<td>10000</td>
+					<td>斤</td>
+					<td>一号土猪</td>
+					<td>按行业标准提供售后服务</td>
+				</tr>
+			</table>
+		</div>
+		<div class="bidinfo_btntime">
+			<p class="bidinfo_btn"><a href="javascript:void(0)" title="" id="bidinfo_btn">我要出价</a></p>
+			<p class="bidinfo_time">剩余<font color="#cc3333">1</font>天<font color="#cc3333">12:08:00</font></p>
+		</div>
+	</div>
+
+<script>
+$(document).ready(function(){
+$("#bidinfo_btn" ).click(function() {
+	$("#bidinfo_dialog" ).dialog({
+		width:360,
+		title:"投标出价",
+		modal:true,
+	});
+});
+});
+</script>
+<style>
+.ui-dialog .ui-dialog-titlebar{padding:0; }
+.ui-dialog .ui-dialog-title{width:100%; margin:0; float:none;;}
+.ui-widget-header{width:360px; height:80px; line-height:80px; background:#cc3333; color:#fff; font-size:32px; text-align:center; padding:0;}
+.ui-draggable .ui-dialog-titlebar{border:0;}
+.ui-dialog .ui-dialog-content{padding:0;}
+.ui-widget.ui-widget-content{border:0; padding:0;}
+
+.ui-dialog .ui-dialog-titlebar-close{width:60px; height:60px; background:url(images/ico8.png) no-repeat; border:0; right:-80px; top:10px; margin:0;}
+.ui-dialog .ui-dialog-titlebar-close span{display:none;}
+
+
+.bidinfo_dialog_txtbox{width:300px; padding:0 30px 30px 30px;}
+.bidinfo_dialog_txtbox p{font-size:18px; margin-top:20px;}
+.bidinfo_dialog_txtbox div{margin-top:10px;}
+.bidinfo_dialog_txtbox div .ntxt{width:298px; border:1px solid #cccccc; font-size:20px; height:40px; text-align:center;}
+.bidinfo_dialog_txtbox div .nbtn{width:300px; font-size:20px; height:45px; background:#d82f2f; text-align:center; border:0; color:#fff; cursor:pointer;}
+</style>
+	<div class="bidpeople">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bidpeople_table">
+			<tr>
+				<th colspan="7" class="bidpeople_tabletop">
+					<strong>当前最低报价 : 235元</strong>
+					<span>当前投标供应商数<font color="#333">（60人）</font></span>
+				</th>
+			</tr>
+			<tr>
+				<th width="8%" bgcolor="#df2d2d">&nbsp;</th>
+				<th width="10%" bgcolor="#df2d2d">供应商</th>
+				<th bgcolor="#df2d2d">供应商名称</th>
+				<th width="18%" bgcolor="#df2d2d">类型</th>
+				<th width="12%" bgcolor="#df2d2d">地区</th>
+				<th width="12%" bgcolor="#df2d2d">参与竞价格</th>
+				<th width="12%" bgcolor="#df2d2d">时间</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td><img src="images/ico18.png" width="50" height="50" border="0" alt=""></td>
+				<td>****有限公司</td>
+				<td>家庭清洁</td>
+				<td>广州天河</td>
+				<td>1235</td>
+				<td>1分钟前</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><img src="images/ico18.png" width="50" height="50" border="0" alt=""></td>
+				<td>****有限公司</td>
+				<td>家庭清洁</td>
+				<td>广州天河</td>
+				<td>1235</td>
+				<td>1分钟前</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><img src="images/ico18.png" width="50" height="50" border="0" alt=""></td>
+				<td>****有限公司</td>
+				<td>家庭清洁</td>
+				<td>广州天河</td>
+				<td>1235</td>
+				<td>1分钟前</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td><img src="images/ico18.png" width="50" height="50" border="0" alt=""></td>
+				<td>****有限公司</td>
+				<td>家庭清洁</td>
+				<td>广州天河</td>
+				<td>1235</td>
+				<td>1分钟前</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td><img src="images/ico18.png" width="50" height="50" border="0" alt=""></td>
+				<td>****有限公司</td>
+				<td>家庭清洁</td>
+				<td>广州天河</td>
+				<td>1235</td>
+				<td>1分钟前</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td><img src="images/ico18.png" width="50" height="50" border="0" alt=""></td>
+				<td>****有限公司</td>
+				<td>家庭清洁</td>
+				<td>广州天河</td>
+				<td>1235</td>
+				<td>1分钟前</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td><img src="images/ico18.png" width="50" height="50" border="0" alt=""></td>
+				<td>****有限公司</td>
+				<td>家庭清洁</td>
+				<td>广州天河</td>
+				<td>1235</td>
+				<td>1分钟前</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td><img src="images/ico18.png" width="50" height="50" border="0" alt=""></td>
+				<td>****有限公司</td>
+				<td>家庭清洁</td>
+				<td>广州天河</td>
+				<td>1235</td>
+				<td>1分钟前</td>
+			</tr>
+		</table>
+	</div>
+	<div class="page">
+		<a href="#" title="">1</a><span>2</span><a href="#" title="">3</a><a href="#" title="">4</a><a href="#" title="">5</a><a href="#" title="">6</a><a href="#" title="">7</a><a href="#" title="">8</a><a href="#" title="">下一页</a>
+	</div>
+</div>
+<div class="foot clearbox">
+	<div class="footnav">
+		<ul >
+			<li><strong><a href="#" title="">首页</a></strong></li>
+			<li><a href="#" title="">关于我们</a></li>
+			<li><a href="#" title="">公司简介</a></li>
+			<li><a href="#" title="">旗下品牌</a></li>
+			<li><a href="#" title="">公司新闻</a></li>
+			<li><a href="#" title="">分店网络</a></li>
+		</ul>
+	</div>
+	<div class="footcontact">
+		<p><strong>联系我们</strong></p>
+		<p>公司名称：湛江市霞山昌大昌超级购物广场有限公司</p>
+		<p>公司地址：湛江市霞山区海滨大道南23号第一、二、三层</p>
+		<p>公司电话：800-830-1712</p>
+		<p>公司传真：0759-2282080</p>
+		<p>电子邮箱：info@chain-mart.com.cn</p>
+		<p>注：如果您有任何宝贵意见，请发送邮件到以上邮箱地址，我们会在第一时间反馈给您，谢谢。</p>
+	</div>
+	<div class="footcustom">
+		<p><strong>客服信息</strong></p>
+		<p>客服1：400-1028-886</p>
+		<p>客服2：400-1028-886</p>
+		<p>工作日: 9:00-10:0</p>
+		<p>节假日: 9:00-10:0，13:30-18:00</p>
+		<p>购卡通道: http://www.chain-mart.com.cn/cdc/card/</p>
+	</div>
+	<div class="footcodes">
+		<ul class="clearbox">
+			<li><img src="images/ewm1.png" width="101" alt="" /></li>
+			<li><img src="images/ewm2.png" width="101" alt="" /></li>
+		</ul>
+	</div>
+</div>
+<div class="copyrightbg">
+	<div class="copyright">
+		<span>Copyright &copy; 2016 湛江市霞山昌大昌超级购物广场有限公司版权所有</span><span>备案号：粤ICP备:14037880号-1</span><span><img src="images/ico17.png" alt="" style="vertical-align:middle"> 粤公网安备 44080302000037号</span>
+	</div>
+</div>
+
+
+<div id="bidinfo_dialog" style="display:none">
+	<div class="bidinfo_dialog_txtbox">
+		<p>输入价格：</p>
+		<div><input type="text" class="ntxt"/></div>
+		<p>再次输入价格：</p>
+		<div><input type="text" class="ntxt"/></div>
+		<div style="margin-top:20px;"><input type="submit" value="确认出价" class="nbtn"/></div>
+	</div>
+</div>
+
+</body>
+</html>
